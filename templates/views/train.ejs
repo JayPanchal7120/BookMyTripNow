@@ -1,0 +1,65 @@
+<!DOCTYPE html>     
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trains</title>
+    <link rel="stylesheet" href="css/s2.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head> 
+<body>
+    <div class="booking-form-box">
+        <div class="radio-btn">
+            <input type="radio" class="btn" name="check" checked><span>Round Trip</span>
+            <input type="radio" class="btn" name="check"><span>One Way</span>
+            <input type="radio" class="btn" name="check"><span>Multi-City</span>
+
+        </div>
+        <div class="booking-form">
+            <form id="trainForm" action="/searchtrain" method="POST">
+            <label>From:</label>
+            <input type="text" id="from" class="form-control" placeholder="City or Station" name="from">
+            <label>To:</label>
+            <input type="text" id="to" class="form-control" placeholder="City or Station" name="to">
+            <div class="input-grp">
+                <label>Check In:</label>
+            <input type="date" id="checkIn" class="form-control select-date" name="checkIn">              
+            </div>
+            <div class="input-grp">
+                <label>Check Out:</label>
+            <input type="date" id="checkOut" class="form-control select-date" name="checkOut">              
+            </div>
+            <div class="input-grp">
+                <label>Adults:</label>
+            <input type="number" id="adultCount" class="form-control" value="1" name="adultCount">              
+            </div>
+            <div class="input-grp">
+                <label>Children:</label>
+            <input type="number" id="childCount" class="form-control" value="0" name="childCount">              
+            </div>
+            <div class="input-grp">
+                <label>Travel Class:</label>
+                <select class="custom-select" id="travelclass" name="travelclass">
+                <option value="1">All Class</option>              
+                <option value="2">Sleeper Class</option>              
+                <option value="3">Third AC</option>              
+                <option value="4">Second AC</option>              
+                <option value="5">First AC</option>              
+                <option value="6">Second Seating</option>              
+                <option value="7">AC Chair Car</option>              
+                <option value="8">First Class</option>              
+                <option value="9">Third AC Economy</option>              
+              </select>
+            </div>
+            <div class="input-grp">
+                <button type="submit" id="submitBtn" class="btn btn-primary train" name="submitBtn">Show Trains</button>
+            </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+{{!-- <script src="train.js"></script> --}}
+
+
+</html>
