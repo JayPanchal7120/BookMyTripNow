@@ -5,6 +5,7 @@ const UserRegistration = require("../models/registers");
 const axios = require('axios');
 
 const bcrypt = require("bcryptjs");
+
 exports.homeRoutes = (req, res) => {
   res.render("index");
 };
@@ -58,15 +59,21 @@ exports.searchTrain = async (req, res) => {
     const from = req.body.from;
     const to = req.body.to;
     const day = new Date(req.body.checkIn).getDay();
-    // console.log(day);
     const travelclass = req.body.travelclass;
-    console.log(from,to,day,travelclass);
-    const tbs = await TrainBetweenStation.find({
-      
-       $and:[{from: from},{to: to},{day:day}]
-      // day: 0,
-      // travelclass: 1,
-    });
+    // console.log(travelclass=="All Class");
+    if(travelclass=="All Class")
+    {
+      // console.log(from,to,day,travelclass);
+      var tbs = await TrainBetweenStation.find({ 
+        $and:[{from: from},{to: to},{day:day}]
+      });
+    }
+    else
+    {
+      var tbs = await TrainBetweenStation.find({ 
+        $and:[{from: from},{to: to},{day:day},{classname:travelclass}]
+      });
+    }
     res.render("searchTrain", { trains: tbs });
   } catch (err) {
     res.status(201).send("Invalid details...");

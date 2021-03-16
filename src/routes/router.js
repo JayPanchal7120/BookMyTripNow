@@ -15,7 +15,7 @@ route.post("/bookingSuccessful", auth, services.bookingSuccessful);
 
 route.post("/searchtrain", auth, services.searchTrain);
 
-route.post("/searchflight", auth, services.searchFlight);
+// route.post("/searchflight", auth, services.searchFlight);
 
 route.get("/secret", auth, services.secret);
 
