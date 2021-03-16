@@ -688,39 +688,44 @@
                 
                 <!-- Editable table -->
                 <div class="col-sm-6 form-group">
-                    <label for="name-l">Train Number</label>
+                    <label for="Tnumber">Train Number</label>
                     <input type="text" class="form-control" name="Tnumber" id="Tnumber"  placeholder=""
-                    disabled>
+                    readonly="true">
                 </div>
                 <div class="col-sm-6 form-group">
-                    <label for="name-l">Train name</label>
+                    <label for="Tname">Train name</label>
                     <input type="text" class="form-control" name="Tname" id="Tname" placeholder=""
-                    disabled>
+                    readonly="true">
                 </div>
                 <div class="col-sm-6 form-group">
-                    <label for="name-l">From</label>
+                    <label for="from">From</label>
                     <input type="text" class="form-control" name="from" id="from" placeholder=""
-                    disabled>
+                    readonly="true">
                 </div>
                 <div class="col-sm-6 form-group">
-                    <label for="name-l">To</label>
+                    <label for="to">To</label>
                     <input type="text" class="form-control" name="to" id="to" placeholder=""
-                    disabled>
+                    readonly="true">
                 </div>
                 <div class="col-sm-6 form-group">
-                    <label for="name-l">Arrival Time</label>
+                    <label for="AT">Arrival Time</label>
                     <input type="text" class="form-control" name="AT" id="AT" placeholder=""
-                    disabled>
+                    readonly="true">
                 </div>
                 <div class="col-sm-6 form-group">
-                    <label for="name-l">Departure Time</label>
+                    <label for="DT">Departure Time</label>
                     <input type="text" class="form-control" name="DT" id="DT" placeholder=""
-                    disabled>
+                    readonly="true">
                 </div>
                 <div class="col-sm-6 form-group">
-                    <label for="name-l">Class</label>
+                    <label for="class">Class</label>
                     <input type="text" class="form-control" name="class" id="class" placeholder=""
-                        disabled>
+                    readonly="true">
+                </div>
+                <div class="col-sm-6 form-group">
+                    <label for="bookDate">Booking Date</label>
+                    <input type="date" class="form-control" name="bookDate" id="bookDate" placeholder=""
+                    readonly="true">
                 </div>
             
                 <div class="col-sm-6 form-group">
@@ -738,7 +743,11 @@
                         class="form-check-label">&nbsp;I accept all terms and conditions.
                     </label>
                 </div>
+
                 <input type="hidden" id="trainID" name="trainID">
+                <input type="hidden" id="noOfTikets" name="noOfTikets">
+                <input type="hidden" id="dist" name="dist">
+
                 <div class="col-sm-12 form-group mb-0">
                     <button class="btn btn-primary float-right" type="submit">Submit</button>
                 </div>

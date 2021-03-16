@@ -49,70 +49,64 @@
                 <tr>
                   <th ></th>
                   <td>Name</td>
-                  <td>Vraj Panchal</td>
+                  <td><%= tik.name%></td>
                   
                 </tr>
                 <tr>
                   <th ></th>
                   <td>Train Number</td>
-                  <td>22101</td>
+                  <td><%= tik.trainNo%></td>
                   
                 </tr>
                 <tr>
                     <th></th>
                     <td>Train Name</td>
-                    <td>Rajdhani EXP</td>
-                    
-                  </tr>
-                  <tr>
-                    <th scope="row"></th>
-                    <td>PNR Number</td>
-                    <td>221000</td>
+                    <td><%= tik.trainName%></td>
                     
                   </tr>
                   <tr>
                     <th scope="row"></th>
                     <td>Class</td>
-                    <td>2S</td>
+                    <td id="tc"><%= tik.travelclass%></td>
                     
                   </tr>
                
                   <tr>
                     <th scope="row"></th>
                     <td>From</td>
-                    <td>Mumbai</td>
+                    <td><%= tik.from%></td>
                     
                   </tr>
                   <tr>
                     <th scope="row"></th>
                     <td>To</td>
-                    <td>Delhi</td>
+                    <td><%= tik.to%></td>
                     
                   </tr>
                   <tr>
                     <th scope="row"></th>
                     <td>Date</td>
-                    <td><strong>08/03/2021</strong></td>
+                    <td><strong><%= tik.date%></strong></td>
                     
                   </tr>
                  
                   <tr>
                     <th scope="row"></th>
                     <td>Arrival Time</td>
-                    <td><strong>8:30 PM</strong></td>
+                    <td><strong><%= tik.atime%></strong></td>
                     
                   </tr>
                   <tr>
                     <th scope="row"></th>
                     <td>Departure Time</td>
-                    <td><strong>5:30 PM</strong> </td>
+                    <td><strong><%= tik.dtime%></strong> </td>
                     
                   </tr>
                   <tr>
                     <th scope="row"></th>
-                    <td>Charge</td>
-                    <td><strong>230</strong> </td>
-                    
+                    <td>Total Charge</td>
+                    <td><strong id="noOfTikets"></strong> </td>
+                    <input type="hidden" id="dist" name="dist" value="<%= tik.dist%>">
                   </tr>
                   <tr>
                     <th scope="row"></th>
@@ -125,4 +119,6 @@
           </table>
     </div>
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous"></script>
+<script src="./js/trainTicket.js"></script>
 </html>

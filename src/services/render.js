@@ -18,19 +18,12 @@ exports.bookingSuccessful = async (req, res) => {
 //   console.log("hi");
   // console.log(req.body);
   try {
-  console.log()
-    const trainID = req.body.trainID;
-  axios.get(`http://localhost:3000/api/trainbetweenstation/${trainID}`)
-        .then(function(response){
-            // console.log(response.data);
-            
-        })
-        .catch(err =>{
-            res.send(err);
-        })
+  // console.log()
+
     const password = req.body.password;
     const cpassword = req.body.cpassword;
     const isMatch = await bcrypt.compare(password, req.user.password);
+    // console.log(req.body.Tnumber);
     if (isMatch && (password === cpassword)) {
       const ub = new Userbooking({
         fname: req.body.fname,
@@ -43,9 +36,23 @@ exports.bookingSuccessful = async (req, res) => {
         dob: req.body.dob,
         phone: req.body.phone,
       });
-      console.log(ub);
+      // console.log(ub);              
       const booked = await ub.save();
-      res.render("index");
+      var ticket = { 
+        name : req.body.fname +" "+ req.body.lname,
+        trainNo : req.body.Tnumber, 
+        trainName : req.body.Tname,
+        travelclass : req.body.class,
+        from : req.body.from,
+        to: req.body.to,
+        date: req.body.bookDate,
+        atime: req.body.AT,
+        dtime: req.body.DT,
+        noOfTikets: req.body.noOfTikets,
+        dist: req.body.dist
+      }
+
+      res.render("trainTicket",{ tik:ticket});
     } else {
       res.send("password are not matching");
     }

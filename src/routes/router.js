@@ -6,7 +6,11 @@ const auth = require("../middleware/auth");
 const services = require("../services/render");
 const controller = require('../controller/controller');
 
-route.get('/api/trainbetweenstation/:id', controller.find);
+//APIs
+route.get("/api/trainbetweenstation/:id", controller.find);
+route.get("/api/traincharge",controller.traincharge)
+
+//Routes
 route.get("", services.homeRoutes);
 
 route.get("/train", auth, services.trainBookings);

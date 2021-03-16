@@ -19,3 +19,16 @@ exports.find = (req, res)=>{
                 res.status(500).send({ message: "Error retrieving train with id " + id})
             })    
 }
+
+exports.traincharge=(req,res)=>{
+    res.send({
+        "First Class" : 20,
+        "Sleeper Class" : 20,
+        "Second Seating" : 15,
+        "First AC": 60,
+        "Second AC" : 50,
+        "Third AC ": 40,
+        "Third AC Economy": 30,
+        "AC Chair Car": 25
+    });
+}
