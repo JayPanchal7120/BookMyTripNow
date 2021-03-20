@@ -27,7 +27,7 @@ exports.traincharge=(req,res)=>{
         "Second Seating" : 15,
         "First AC": 60,
         "Second AC" : 50,
-        "Third AC ": 40,
+        "Third AC": 40,
         "Third AC Economy": 30,
         "AC Chair Car": 25
     });
