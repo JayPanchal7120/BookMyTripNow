@@ -22,13 +22,13 @@ exports.find = (req, res)=>{
 
 exports.traincharge=(req,res)=>{
     res.send({
-        "First Class" : 20,
-        "Sleeper Class" : 20,
-        "Second Seating" : 15,
-        "First AC": 60,
-        "Second AC" : 50,
-        "Third AC ": 40,
-        "Third AC Economy": 30,
-        "AC Chair Car": 25
+        "First Class" : 7,
+        "Sleeper Class" : 7,
+        "Second Seating" : 4,
+        "First AC": 20,
+        "Second AC" : 15,
+        "Third AC": 10,
+        "Third AC Economy": 7,
+        "AC Chair Car": 7
     });
 }
