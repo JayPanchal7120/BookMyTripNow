@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-// console.log("In serchFlight.js");
-=======
 // console.log("In serchTrain.js");
->>>>>>> jay
 
 
 function booking(id) {
