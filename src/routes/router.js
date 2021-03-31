@@ -7,19 +7,23 @@ const services = require("../services/render");
 const controller = require('../controller/controller');
 
 //APIs
-route.get("/api/trainbetweenstation/:id", controller.find);
-route.get("/api/traincharge",controller.traincharge)
+route.get("/api/trainbetweenstation/:id", controller.findtrain);
+route.get("/api/flightbetweenstation/:id", controller.findflight);
+route.get("/api/traincharge",controller.traincharge);
+route.get("/api/flightcharge",controller.flightcharge);
 
 //Routes
 route.get("", services.homeRoutes);
 
 route.get("/train", auth, services.trainBookings);
 
-route.post("/bookingSuccessful", auth, services.bookingSuccessful);
+route.post("/trainbookingSuccessful", auth, services.trainbookingSuccessful);
+
+route.post("/flightbookingSuccessful", auth, services.flightbookingSuccessful);
 
 route.post("/searchtrain", auth, services.searchTrain);
 
-// route.post("/searchflight", auth, services.searchFlight);
+route.post("/searchflight", auth, services.searchFlight);
 
 route.get("/secret", auth, services.secret);
 
@@ -29,7 +33,9 @@ route.get("/cab", auth, services.cab);
 
 route.get("/bus", auth, services.bus);
 
-route.get("/bookingForm", auth, services.bookingForm);
+route.get("/trainbookingForm", auth, services.trainbookingForm);
+
+route.get("/flightbookingForm", auth, services.flightbookingForm);
 
 route.get("/hotel", auth, services.hotel);
 
