@@ -28,7 +28,11 @@
     <title>Booking Page</title>
     <style>
         body{
+<<<<<<< HEAD
             background: url('./img/bg11.jpg') no-repeat center center/cover;
+=======
+            background: url('./img/b4.jpg') no-repeat center center/cover;
+>>>>>>> jay
     height: 100%;
     width: 100%;
     top: 0px;
@@ -52,9 +56,15 @@
                 <th scope="col">Flight Name</th>
                 <th scope="col">From</th>
                 <th scope="col">To</th>
+<<<<<<< HEAD
                 <th scope="col">Takeoff Time</th>
                 <th scope="col">Duration</th>
                 <th scope="col">Landing Time</th>
+=======
+                <th scope="col">Take off</th>
+                <th scope="col">Duration</th>
+                <th scope="col">Landing</th>
+>>>>>>> jay
                 <th scope="col">Book</th>
             </tr>
         </thead>
@@ -67,12 +77,21 @@
                 <td><%= flights[i].flightName %></td>
                 <td><%= flights[i].from %></td>
                 <td><%= flights[i].to %></td>
+<<<<<<< HEAD
                 <td><strong><%= flights[i].arrival %></strong></td>
                 <td><%= flights[i].duration %></td>
                 <td><strong><%= flights[i].departure %></strong></td>
 
                
                 <td><a href="/bookingForm" 
+=======
+                <td><strong><%= flights[i].takeoff %></strong></td>
+                <td><%= flights[i].duration %></td>
+                <td><strong><%= flights[i].landing %></strong></td>
+
+               
+                <td><a href="/flightbookingForm" 
+>>>>>>> jay
                     style="text-decoration: none; color: white;" >
                     <button type="button" class="btn btn-secondary" id="<%= flights[i]._id%>" onclick="booking(this.id)">Book Now</button>
                 </a>

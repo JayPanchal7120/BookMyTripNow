@@ -1,5 +1,6 @@
 const Userbooking = require("../models/bookigForm");
 const TrainBetweenStation = require("../models/trainsBetweenStation");
+const FlightBetweenAirport = require("../models/flightBetweenAirport");
 const UserRegistration = require("../models/registers");
 
 const axios = require('axios');
@@ -14,7 +15,7 @@ exports.trainBookings = (req, res) => {
   res.render("train");
 };
 
-exports.bookingSuccessful = async (req, res) => {
+exports.trainbookingSuccessful = async (req, res) => {
 //   console.log("hi");
   // console.log(req.body);
   try {
@@ -61,6 +62,53 @@ exports.bookingSuccessful = async (req, res) => {
   }
 };
 
+exports.flightbookingSuccessful = async (req, res) => {
+  //   console.log("hi");
+    // console.log(req.body);
+    try {
+    // console.log()
+  
+      const password = req.body.password;
+      const cpassword = req.body.cpassword;
+      const isMatch = await bcrypt.compare(password, req.user.password);
+      // console.log(req.body.Tnumber);
+      if (isMatch && (password === cpassword)) {
+        const ub = new Userbooking({
+          fname: req.body.fname,
+          lname: req.body.lname,
+          email: req.body.email,
+          Locality: req.body.Locality,
+          address: req.body.address,
+          State: req.body.State,
+          Zip: req.body.Zip,
+          dob: req.body.dob,
+          phone: req.body.phone,
+        });
+        // console.log(ub);              
+        const booked = await ub.save();
+        var ticket = { 
+          name : req.body.fname +" "+ req.body.lname,
+          flightNo : req.body.Fnumber, 
+          flightName : req.body.Fname,
+          travelclass : req.body.class,
+          from : req.body.from,
+          to: req.body.to,
+          date: req.body.bookDate,
+          atime: req.body.TOF,
+          dtime: req.body.LT,
+          noOfTikets: req.body.noOfTikets,
+          dist: req.body.dist
+        }
+  
+        res.render("flightTicket",{ tik:ticket});
+      } else {
+        res.send("password are not matching");
+      }
+    } catch (error) {
+      res.status(400).send(error);
+    }
+  };
+
 exports.searchTrain = async (req, res) => {
   try {
     const from = req.body.from;
@@ -68,20 +116,46 @@ exports.searchTrain = async (req, res) => {
     const day = new Date(req.body.checkIn).getDay();
     const travelclass = req.body.travelclass;
     // console.log(travelclass=="All Class");
-    if(travelclass=="All Class")
-    {
-      // console.log(from,to,day,travelclass);
-      var tbs = await TrainBetweenStation.find({ 
-        $and:[{from: from},{to: to},{day:day}]
-      });
-    }
-    else
-    {
+    // if(travelclass=="All Class")
+    // {
+    //   // console.log(from,to,day,travelclass);
+    //   var tbs = await TrainBetweenStation.find({ 
+    //     $and:[{from: from},{to: to},{day:day}]
+    //   });
+    // }
+    // else
+    // {
       var tbs = await TrainBetweenStation.find({ 
         $and:[{from: from},{to: to},{day:day},{classname:travelclass}]
       });
-    }
+    // }
     res.render("searchTrain", { trains: tbs });
+  } catch (err) {
+    res.status(201).send("Invalid details...");
+  }
+};
+
+exports.searchFlight = async (req, res) => {
+  try {
+    const from = req.body.from;
+    const to = req.body.to;
+    const day = new Date(req.body.checkIn).getDay();
+    const travelclass = req.body.travelclass;
+    // console.log(travelclass=="All Class");
+    // console.log(from,to,day,travelclass);
+    // if(travelclass=="All Class")
+    // {
+    //   var fbs = await FlightBetweenAirport.find({ 
+    //     $and:[{from: from},{to: to},{day:day}]
+    //   });
+    // }
+    // else
+    // {
+      var fbs = await FlightBetweenAirport.find({ 
+        $and:[{from: from},{to: to},{day:day},{classname:travelclass}]
+      });
+    // }
+    res.render("searchFlight", { flights: fbs });
   } catch (err) {
     res.status(201).send("Invalid details...");
   }
@@ -104,8 +178,13 @@ exports.bus = (req, res) => {
     res.render("bus");
   };
 
-exports.bookingForm = (req, res) => {
-  res.render("bookingForm");
+exports.trainbookingForm = (req, res) => {
+  res.render("trainbookingForm");
+  // console.log(req.query.id);
+};
+
+exports.flightbookingForm = (req, res) => {
+  res.render("flightbookingForm");
   // console.log(req.query.id);
 };
 
