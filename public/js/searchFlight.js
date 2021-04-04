@@ -1,4 +1,4 @@
-// console.log("In serchFlight.js");
+// console.log("In serchTrain.js");
 
 
 function booking(id) {
