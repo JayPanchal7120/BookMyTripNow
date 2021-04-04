@@ -58,6 +58,9 @@ exports.flightcharge=(req,res)=>{
     res.send({
         "Economy Class" : 10,
         "Business Class" : 15
-
     });
+}
+
+exports.bookedtrains = (req,res)=>{
+    
 }

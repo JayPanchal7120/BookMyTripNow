@@ -9,8 +9,12 @@ const controller = require('../controller/controller');
 //APIs
 route.get("/api/trainbetweenstation/:id", controller.findtrain);
 route.get("/api/flightbetweenstation/:id", controller.findflight);
+
 route.get("/api/traincharge",controller.traincharge);
 route.get("/api/flightcharge",controller.flightcharge);
+
+// route.get("/api/bookedtrains",controller.bookedtrains);
+// hi vraj
 
 //Routes
 route.get("", services.homeRoutes);
