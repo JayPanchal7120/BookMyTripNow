@@ -14,14 +14,14 @@ html{
 }
 
 /* Navigation Bar */
-#navbar{
+/* #navbar{
     display: flex;
     align-items: center;
     position: sticky;
     top: 0px;
-}
+} */
 
-#navbar::before{
+/* #navbar::before{
     content: "";
     background-color: black;
     position: absolute;
@@ -31,7 +31,7 @@ html{
     width:100%;
     z-index: -1;
     opacity: 0.69;
-}
+} */
 
 /* Navigation Bar: Logo and Image */
 #logo{
@@ -72,8 +72,16 @@ html{
     background-color: white;
 }
 
+.nav-item
+{
+    font-size: 19px;
+}
+.navbar-brand {
+    font-size: 25px;
+}
+
 /* Home Section */
-#home{
+/* #home{
     display: flex;
     flex-direction: column;
     padding:3px 200px;
@@ -92,60 +100,102 @@ html{
     width: 100%;
     z-index: -1;
     opacity:0.89;
-}
+} */
 
-#home h1{
+/* #home h1{
     color:black;
     text-align: center;
-    /* font-family: 'Bree Serif', serif; */
+    font-family: 'Bree Serif', serif; 
     font-family: 'Baloo Bhaina 2', cursive;
     font-size: 3.5rem;
 
-}
+} */
 
-#home p{
+/* #home p{
     color:black;
     text-align: center;
     font-size: 1.5rem;
-    /* font-family: 'Bree Serif', serif; */
+     font-family: 'Bree Serif', serif; 
     font-family: 'Baloo Bhaina 2', cursive;
     font-size: 1.7rem;
 
+
+} */
+.img-fluid{
+    /* align-items: right; */
+    max-width: 100%;
+    height: auto; 
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    /* width: 1000px; */
+}
+.img.sticky{
+    position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+}
+.text-end{
+     padding-top:0px; 
 
 }
 /* Services Section */
 #services{
     margin: 34px;
     display: flex;
+    
+}
+.s-text{
+    padding-top: 50px;
 }
 #services .box{ 
     /* border: 2px solid rgb(103, 104, 105); */
-    padding: 2px;
-    margin: 2px 22px;
-    border-radius: 10px;
-    background: #ffffff;
-    margin-bottom: 20px;
-    font-size: 13px;
-    box-shadow: rgb(153, 149, 149) 4px 4px;
+    /* padding: 2px;
+    margin: 2px 22px; */
+    /* border-radius: 10px; */
+    /* background: #ffffff; */
+    /* margin-bottom: 20px;
+    font-size: 13px; */
+    /* box-shadow: rgb(153, 149, 149) 4px 4px; */
 }
 
 #services .box img{ 
-   height: 150px;
+   height: 75px;
    margin: auto;
    display: block;
+  -webkit-filter: invert(1);
+    filter: invert(1);
 }
 
 #services .box h2{
     /* font-family: 'Bree Serif', serif; */
     font-family: 'Baloo Bhaina 2', cursive;
     font-size: 2.4rem;
-
 } 
+
+#features{
+    padding: 4% 10%;
+}
+
+.feature-box{
+    text-align: center;
+    padding: 4%;
+}
+.feature-img{
+    width: 80px;
+    -webkit-filter: invert(1);
+    filter: invert(1);
+}
+
+.icon{
+    color: white;
+}
 
 /* Clients Section */
 #client-section{ 
     position: relative;
 }
+
 
 #client-section::before{
  content: "";
@@ -220,15 +270,16 @@ footer{
 /* Utility Classes */
 .h-primary{
     font-family: 'Baloo Bhaina 2', cursive;
-    font-size: 3.6rem;
-    padding: 12px;
+    font-size: 3rem;
+    /* padding: 10px 10px 10px 10px; */
+    
 }
 
 .h-secondary{
     /* font-family: 'Bree Serif', serif; */
     font-family: 'Baloo Bhaina 2', cursive;
     /* letter-spacing: 5; */
-    font-size: 3rem;
+    font-size: 2rem;
     padding: 12px;
     text-decoration: none;
 
@@ -248,3 +299,8 @@ footer{
 .center{
     text-align: center;
 }
+
+ /* @media only screen and (max-width: 768px) {
+    .col-6 {width: 50%;} 
+    background-color: brown;
+}  */
