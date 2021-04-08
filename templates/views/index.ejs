@@ -52,9 +52,12 @@
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="#services-container"> Services</a></li>
-                <li class="nav-item"><a class="nav-link" href="./secret"> Secret</a></li>
-                <li class="nav-item"><a class="nav-link" href="./login"> Register</a></li>
+                <!-- <li class="nav-item"><a class="nav-link" href="./secret"> Secret</a></li> -->
+                <% if(!logged) { %>
+                <li class="nav-item"><a class="nav-link" href="./login"> Login</a></li>
+                <% } else {%>
                 <li class="nav-item"><a class="nav-link" href="./logout"> logout</a></li>
+                <% } %>
                 <li class="nav-item"><a class="nav-link" href="#"> Profile</a></li>
 
                 <!-- {{!-- {{#if login}}

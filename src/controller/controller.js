@@ -1,4 +1,4 @@
-const FlightBetweenAirport = require("../models/flightBetweenAirport");
+const FlightBetweenAirport = require("../models/flightsBetweenAirport");
 const TrainBetweenStation = require("../models/trainsBetweenStation");
 
 exports.findtrain = (req, res)=>{

@@ -1,0 +1,132 @@
+<html>
+<head>
+	<title>p1</title>
+	<link rel="stylesheet" type="text/css" href="p1.css">
+	<script type="text/javascript">
+		function effect()
+		{
+			var x=document.getElementById("para1");
+			x.style.backgroundColor="lightblue";
+		}
+		function effectback()
+		{
+			var x=document.getElementById("para1");
+			x.style.backgroundColor="yellow";
+		}
+		function validation()
+		{
+			var x=document.getElementsByTagName("input");
+			if(x[0].value.length==0)
+			{
+				alert("Username field is not empty");
+				return false;
+			}
+			else if(x[1].value.length<8)
+			{
+				alert("Minimum 8 characters required for password");
+				return false;
+			}
+			else
+				return true;
+		}
+	</script>
+	<style type="text/css">
+		p
+		{
+			color: gray;
+			background-color: red;
+			text-align: justify;
+		}
+		a
+		{
+			text-decoration: none;
+			font-style: italic;
+			font-size: 15px;
+		}
+	</style>
+</head>
+<body>
+<h1 style="text-decoration: underline;" >Welcome to HTML</h1>
+
+<span style="font-weight: bold;font-family: comic sans ms">This is my first html program hello how are you...</span><hr/>
+
+<a href="http://www.google.com">go to google</a> <br/>
+
+<img src="jay.jpg" border="1" alt="jay photo" height="40" width="30" /><br/>
+
+<p style="color:blue;background-color: yellow " id="para1" onmouseover="effect()" onmouseout="effectback()" >Disposable email - is a service that allows to receive email at a temporary address that self-destructed after a certain time elapses. It is also known by names like : tempmail, 10minutemail, throwaway email, fake-mail or trash-mail. Many forums, Wi-Fi owners, websites and blogs ask visitors to register before they can view content, post comments or download something. Temp-Mail - is most advanced throwaway email service that helps you avoid spam and stay safe.</p>
+<ol type="I" class="pur" style="text-transform: uppercase;">
+	<li>c</li>
+	<li>cpp</li>
+	<li>java</li>
+	<li>python</li>
+</ol>
+<table border="2" cellspacing="0" cellpadding="2" id="table">
+	<tr bgcolor="lightblue">
+		<th> Roll no</th>
+		<th> Name</th>
+		<th> Age</th>
+	</tr>
+	<tr>
+		<td> 1</td>
+		<td> Jay Panchal</td>
+		<td> 20</td>
+	</tr>
+	<tr>
+		<td> 2</td>
+		<td> Neel Patel</td>
+		<td> 21</td>
+	</tr>
+	<tr>
+		<td> 3</td>
+		<td> Ayush Gandhi</td>
+		<td> 19</td>
+	</tr>
+	<tr>
+		<td colspan="3" align="center"> Hello students</td>
+		
+	</tr>
+
+</table>
+<form action="a.java" method="post" onsubmit="return validation()">
+	<table id="form">
+		<tr>
+			<td>Username</td>
+			<td><input type="text" name="uname"/></td>
+		</tr>
+		<tr>
+			<td>Password</td>
+			<td><input type="password" name="pass"/></td>
+		</tr>
+		<tr>
+			<td>Gender</td>
+			<td><input type="radio" name="gender"/>Male</td>
+			<td><input type="radio" name="gender"/>Female</td>
+		</tr>
+		<tr>
+			<td>Course</td>
+			<td><input type="checkbox" name="checkbox"/>IT</td>
+			<td><input type="checkbox" name="checkbox"/>Computer</td>
+		</tr>
+		<tr>
+			<td>City</td>
+			<td>
+				<select>
+					<option>Ankleshwar</option>
+					<option>Bharuch</option>
+					<option>Surat</option>
+					<option>Vadodara</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td><input type="submit" name="submit" value="Register" /></td>
+			<td><input type="reset" name="reset" /></td>
+		</tr>
+	</table>
+</form>
+<iframe src="http://www.google.com" width=100%  name="myframe"></iframe>
+<a href="http://www.facebook.com" target="myframe">Facebook</a>
+<a href="http://web.whatsapp.com" target="myframe">Whatsapp</a>
+</body>
+</html>

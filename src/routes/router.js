@@ -14,7 +14,7 @@ route.get("/api/traincharge",controller.traincharge);
 route.get("/api/flightcharge",controller.flightcharge);
 
 // route.get("/api/bookedtrains",controller.bookedtrains);
-// hi vraj
+
 
 //Routes
 route.get("", services.homeRoutes);
@@ -50,6 +50,9 @@ route.get("/logout", auth, services.logout);
 route.post("/signin", services.signin);
 
 route.post("/register", services.register);
+
+// route.get("/download-train-ticket", services.downloadtrainticket);
+
 
 route.get("*", services.error404);
 

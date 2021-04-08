@@ -1,6 +1,6 @@
 const Userbooking = require("../models/bookigForm");
 const TrainBetweenStation = require("../models/trainsBetweenStation");
-const FlightBetweenAirport = require("../models/flightBetweenAirport");
+const FlightBetweenAirport = require("../models/flightsBetweenAirport");
 const UserRegistration = require("../models/registers");
 
 const axios = require('axios');
@@ -8,7 +8,8 @@ const axios = require('axios');
 const bcrypt = require("bcryptjs");
 
 exports.homeRoutes = (req, res) => {
-  res.render("index");
+  login_status = false;
+  res.render("index",{logged:login_status});
 };
 
 exports.trainBookings = (req, res) => {
@@ -203,9 +204,10 @@ exports.logout = async (req, res) => {
     });
 
     res.clearCookie("jwt");
+    login_status = false;
     console.log("logout successfully...");
     await req.user.save();
-    res.redirect("/");
+    res.render("",{logged:login_status});
   } catch (error) {
     res.status(500).send(error);
   }
@@ -227,7 +229,9 @@ exports.signin = async (req, res) => {
     });
     // console.log(token);
     if (isMatch) {
-      res.status(201).redirect("/");
+      login_status = true;
+      console.log("login successfully...");
+      res.status(201).render("",{logged:login_status});
     } else {
       res.send("Invalid Login details...");
     }
@@ -264,6 +268,13 @@ exports.register = async (req, res) => {
     res.status(400).send(error);
   }
 };
+
+// exports.downloadtrainticket = (req, res) => {
+//   res.pdfFromHTML({
+//     filename: 'generated.pdf',
+//     html: path.resolve(__dirname, './p1.html'),
+// });
+// };
 
 exports.error404 = (req, res) => {
   res.render("error404");
