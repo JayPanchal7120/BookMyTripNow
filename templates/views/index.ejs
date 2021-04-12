@@ -40,30 +40,8 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a href="#" class="navbar-brand" style="font-family: 'Marck Script', cursive;
-        font-family: 'Pacifico', cursive; ">Book&nbsp; My Trip</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
-            aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="#services-container"> Services</a></li>
-                <li class="nav-item"><a class="nav-link" href="./secret"> Secret</a></li>
-                <li class="nav-item"><a class="nav-link" href="./login"> Register</a></li>
-                <li class="nav-item"><a class="nav-link" href="./logout"> logout</a></li>
-                <li class="nav-item"><a class="nav-link" href="#"> Profile</a></li>
-
-                <!-- {{!-- {{#if login}}
-            <li class="item"><a href="./logout">login successfull</a></li>
-            {{/if}} --}} -->
-
-            </ul>
-        </div>
-    </nav>
+   
+    <%- include('../partials/navbar') %>
     <!-- ---------------------------------------------------------------------------------------------------------------- -->
     <section id="home">
         <!-- <img class="img-fluid img.sticky " style="width: 700px;"src="./img/home1.svg" alt="O">
@@ -131,7 +109,8 @@
 
         </div>
     </section>
-
+<!-- ----------------------------------------------------------------------------------------------------------------
+ -->
     <section id="client-section">
         <h1 class="h-primary center">Blogs</h1>
         <div id="clients">
@@ -152,8 +131,9 @@
         </div>
 
     </section>
-
-    <section id="contact">
+<!-- ----------------------------------------------------------------------------------------------------------------
+ -->
+    <!-- <section id="contact">
         <h1 class="h-primary center">Contact Us</h1>
         <div id="contact-box">
             <form action="">
@@ -175,13 +155,10 @@
                 </div>
             </form>
         </div>
-    </section>
-
-    <footer>
-        <div class="center">
-            Copyright &copy; www.BookMyTrip.com. All rights reserved!
-        </div>
-    </footer>
+    </section> -->
+<!-- ===================================================================================
+ -->
+ <%- include('../partials/footer') %>
 </body>
 
 </html>
