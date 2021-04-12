@@ -7,14 +7,14 @@
       src="https://kit.fontawesome.com/64d58efce2.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="css/signout.css" />
+    <link rel="stylesheet" href="/css/signout.css" />
     <title>Sign in & Sign up Form</title>
   </head>
   <body>
     <div class="container">
       <div class="forms-container">
         <div class="signin-signup">
-
+          <h3 style="color: darkgreen"><%=msg%></h3>
 
           <form action="/signin" class="sign-in-form" method="POST">
             <h2 class="title">Sign in</h2>
@@ -24,7 +24,11 @@
             </div>
             <div class="input-field">
               <i class="fas fa-lock"></i>
-              <input type="password" placeholder="Password" name="si_password"/>
+              <input
+                type="password"
+                placeholder="Password"
+                name="si_password"
+              />
             </div>
             <input type="submit" value="Login" class="btn solid" />
             <p class="social-text">Or Sign in with social platforms</p>
@@ -44,7 +48,6 @@
             </div>
           </form>
 
-
           <form action="/register" class="sign-up-form" method="POST">
             <h2 class="title">Sign up</h2>
             <div class="input-field">
@@ -53,17 +56,37 @@
             </div>
             <div class="input-field">
               <i class="fas fa-envelope"></i>
-              <input type="email" placeholder="Email" name="email"/>
+              <input type="email" placeholder="Email" name="email" />
             </div>
             <div class="input-field">
               <i class="fas fa-lock"></i>
-              <input type="password" placeholder="Password" name="password" />
+              <input
+                type="password"
+                placeholder="Password"
+                id="password"
+                name="password"
+              />
             </div>
             <div class="input-field">
               <i class="fas fa-lock"></i>
-              <input type="password" placeholder="Confirm Password" name="cpassword" />
+              <input
+                type="password"
+                placeholder="Confirm Password"
+                id="cpassword"
+                name="cpassword"
+                oninput="check()"
+              />
             </div>
-            <input type="submit" class="btn" value="Sign up" name="submit"/>
+            <h3 id="PNM" style="color: brown; display: none">
+              Passwords are not match
+            </h3>
+            <input
+              type="submit"
+              class="btn"
+              value="Sign up"
+              name="submit"
+              id="signupsubmit"
+            />
             <p class="social-text">Or Sign up with social platforms</p>
             <div class="social-media">
               <a href="#" class="social-icon">
@@ -80,8 +103,6 @@
               </a>
             </div>
           </form>
-
-
         </div>
       </div>
 
@@ -94,11 +115,7 @@
               ex ratione. Aliquid! -->
               Are you new here than you should signup Here..
             </p>
-            <button class="btn transparent" id="sign-up-btn">
-      
-              Sign up
-        
-            </button>
+            <button class="btn transparent" id="sign-up-btn">Sign up</button>
           </div>
           <img src="img/girl5.svg" class="image" alt="" />
         </div>
@@ -108,13 +125,10 @@
             <p>
               <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
               laboriosam ad deleniti. -->
-              Are one of our member than you no need to sign out. Only do sign in..
+              Are one of our member than you no need to sign out. Only do sign
+              in..
             </p>
-            <button class="btn transparent" id="sign-in-btn">
-         
-              Sign in
-             
-            </button>
+            <button class="btn transparent" id="sign-in-btn">Sign in</button>
           </div>
           <img src="img/boy1.svg" class="image" alt="" />
         </div>

@@ -4,17 +4,16 @@ const route = express.Router();
 const auth = require("../middleware/auth");
 
 const services = require("../services/render");
-const controller = require('../controller/controller');
+const controller = require("../controller/controller");
 
 //APIs
 route.get("/api/trainbetweenstation/:id", controller.findtrain);
 route.get("/api/flightbetweenstation/:id", controller.findflight);
 
-route.get("/api/traincharge",controller.traincharge);
-route.get("/api/flightcharge",controller.flightcharge);
+route.get("/api/traincharge", controller.traincharge);
+route.get("/api/flightcharge", controller.flightcharge);
 
 // route.get("/api/bookedtrains",controller.bookedtrains);
-
 
 //Routes
 route.get("", services.homeRoutes);
@@ -51,11 +50,11 @@ route.post("/signin", services.signin);
 
 route.post("/register", services.register);
 
+route.get("/verify-email/:token", services.verifyEmail);
+
 // route.get("/download-train-ticket", services.downloadtrainticket);
 
-
 route.get("*", services.error404);
-
 
 ////APIs
 
