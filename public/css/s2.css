@@ -5,21 +5,35 @@ body{
     /* background-color: bisque; */
     /* content: ""; */
     /* position: absolute; */
-    background: url('../img/b4.jpg') no-repeat center center/cover;
+    /* background: url('../img/b4.jpg') no-repeat center center/cover;
     height: 100%;
     width: 100%;
     top: 0px;
     left: 0px;
     z-index: -1;
-    opacity: 10;
+    opacity: 10; */
     /* align-content: flex-start; */
 }
 .booking-form-box{
     max-width: 350px;
     /* border: 1px solid #ced4da; */
-    margin: 10% auto 0;
-    background-color: rgb(34, 33, 33);
-    border-radius: 12px;   
+    margin: 7% auto 0;
+    /* background-color: rgb(34, 33, 33); */
+    border-radius: 3px;   
+    max-width: 350px;
+    border: 0px solid #e4ecec;
+    margin: 7% auto 0;
+    /* background-color: rgb(53, 51, 196); */
+    /* font-family: 'Open Sans Condensed', arial, sans; */
+            
+            background: #FFFFFF;
+    
+            /* margin: 50px auto; */
+            border-radius: 3px;
+
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.22);
+            -moz-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.22);
+            -webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.22);
 
 }
 .radio-btn{
@@ -48,7 +62,7 @@ body{
     transition: 0.5s;
 }
 .radio-btn span{
-    color: white;
+    color: rgb(63, 60, 60);
     margin-right: 5px;
     font-size: 16px;
 }
@@ -59,11 +73,12 @@ body{
     margin-bottom: 5px;
     margin-top: 10px;
     font-size: 16px;
-    color: white;
+    color:rgb(63, 60, 60);
+    font-weight: bold;
     
 }
 input::placeholder{
-    color: white!important;
+    color: rgb(63, 60, 60)!important;
 }
 .input-grp{
     width: 151px;
@@ -72,8 +87,8 @@ input::placeholder{
 .form-control{
     font-size: 12px!important;
     border-radius: 0!important;
-    color: white!important;
-    background: rgb(34, 33, 33)!important;
+    color: rgb(63, 60, 60)!important;
+    background: transparent!important;
     box-shadow: none!important;
 
 }
@@ -81,14 +96,14 @@ input::placeholder{
 .select-date::-webkit-outer-spin-button{
     -webkit-appearance: none;
     margin: 0;
-    color: white;
+    color:rgb(63, 60, 60);
     
 }
 .select-date::-webkit-calender-picker-indicator{
     background: transparent!important ;
 }
 .custom-select{
-    color: white!important;
+    color: rgb(63, 60, 60)!important;
     font-size: 12px!important;
     border: 1px solid #ced4da!important;
     box-shadow: none!important;
@@ -102,15 +117,18 @@ input::placeholder{
     width: 100%!important;
     padding: 9px 0!important;
     font-size: 12px!important;
-    border:1px solid #ced4da!important;
-    background: transparent!important;
+    border:1px solid #1d1e1f!important;
+    background:rgb(63, 60, 60) !important;
     box-shadow: none!important;
-    border-radius: 0!important;
-    color: white!important;
+    border-radius: 3px!important;
+    color: rgb(248, 241, 241)!important;
+    align-items: center;
+    justify-content: center;
+    margin-left: 50%;
 
 }
 .train:hover{
-    background: #fff!important;
-    color: #000!important;
+    background: rgb(63, 60, 60)!important;
+    color: rgb(255, 249, 249)!important;
     transition: 0.5s;
 }
