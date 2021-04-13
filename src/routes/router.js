@@ -51,15 +51,10 @@ route.post("/signin", services.signin);
 
 route.post("/register", services.register);
 
-<<<<<<< HEAD
 route.get("/verify-email/:token", services.verifyEmail);
 
 // route.get("/download-train-ticket", services.downloadtrainticket);
-=======
 route.get("*", services.e404);
->>>>>>> 5f3dfb57e498c20c05ded2910c269b16b9a03c3f
-
-route.get("*", services.error404);
 
 ////APIs
 

@@ -368,7 +368,6 @@ exports.verifyEmail = async (req, res) => {
   }
 };
 
-<<<<<<< HEAD
 // exports.downloadtrainticket = (req, res) => {
 //   res.pdfFromHTML({
 //     filename: 'generated.pdf',
@@ -376,11 +375,7 @@ exports.verifyEmail = async (req, res) => {
 // });
 // };
 
-exports.error404 = (req, res) => {
-  res.render("error404");
-=======
 exports.e404 = (req, res) => {
   res.render("404");
   // res.render("errorpage");
->>>>>>> 5f3dfb57e498c20c05ded2910c269b16b9a03c3f
 };
