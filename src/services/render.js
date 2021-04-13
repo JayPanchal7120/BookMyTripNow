@@ -14,6 +14,10 @@ exports.homeRoutes = (req, res) => {
   res.render("index", { logged: login_status });
 };
 
+exports.contactus = (req, res) => {
+  res.render("contactus");
+};
+
 exports.trainBookings = (req, res) => {
   res.render("train");
 };
@@ -371,6 +375,7 @@ exports.verifyEmail = async (req, res) => {
 // });
 // };
 
-exports.error404 = (req, res) => {
-  res.render("error404");
+exports.e404 = (req, res) => {
+  res.render("404");
+  // res.render("errorpage");
 };

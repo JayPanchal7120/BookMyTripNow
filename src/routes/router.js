@@ -28,7 +28,8 @@ route.post("/searchtrain", auth, services.searchTrain);
 
 route.post("/searchflight", auth, services.searchFlight);
 
-route.get("/secret", auth, services.secret);
+// route.get("/secret", auth, services.secret);
+route.get("/contactus", services.contactus);
 
 route.get("/flight", auth, services.flight);
 
@@ -53,8 +54,7 @@ route.post("/register", services.register);
 route.get("/verify-email/:token", services.verifyEmail);
 
 // route.get("/download-train-ticket", services.downloadtrainticket);
-
-route.get("*", services.error404);
+route.get("*", services.e404);
 
 ////APIs
 
