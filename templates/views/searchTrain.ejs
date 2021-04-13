@@ -131,22 +131,19 @@
         </tr>
       </thead>
       <tbody>
-        <% for(var i = 0; i < trains.length; i++) { %>
+        <% for(var i=0; i < trains.length; i++) { %>
         <tr>
           <th scope="row"><%= i + 1 %></th>
           <td><%= trains[i].trainNo %></td>
           <td><%= trains[i].trainName %></td>
           <td><%= trains[i].from %></td>
           <td><%= trains[i].to %></td>
-          <td><strong><%= trains[i].arrival %></strong></td>
+          <td><strong> <%= trains[i].arrival %> </strong></td>
           <td><%= trains[i].duration %></td>
-          <td><strong><%= trains[i].departure %></strong></td>
+          <td><strong> <%= trains[i].departure %> </strong></td>
 
           <td>
-            <a
-              href="/trainbookingForm"
-              style="text-decoration: none; color: white"
-            >
+            <a href="/bookingForm" style="text-decoration: none; color: white">
               <button
                 type="button"
                 class="btn btn-secondary"
@@ -157,9 +154,8 @@
               </button>
             </a>
           </td>
-
-          <% }%>
         </tr>
+        <% } %>
       </tbody>
     </table>
   </body>
