@@ -44,6 +44,6 @@ const userSchema = new mongoose.Schema({
 });
 
 
-const flightBetweenAirport = mongoose.model("flightBetweenAirport",userSchema);
+const FlightBetweenAirport = mongoose.model("FlightBetweenAirport",userSchema);
 
-module.exports = flightBetweenAirport;
+module.exports = FlightBetweenAirport;

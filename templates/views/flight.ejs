@@ -35,76 +35,39 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a href="#" class="navbar-brand" style="font-family: 'Marck Script', cursive;
-        font-family: 'Pacifico', cursive; ">Book&nbsp; My Trip </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
-            aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
 
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="#services-container"> Services</a></li>
-                <li class="nav-item"><a class="nav-link" href="/contactus"> Contact us</a></li>
-                <li class="nav-item"><a class="nav-link" href="./login"> Register</a></li>
-                <li class="nav-item"><a class="nav-link" href="./logout"> logout</a></li>
-                <li class="nav-item"><a class="nav-link" href="#"> Profile</a></li>
-            </ul>
-        </div>
-    </nav>
-    <div style="margin-top: 75px; margin-left: 230px;">
-        <h1 style="font-family: 'Marck Script', cursive;
-        font-family: 'Pacifico', cursive; ">
-            Book your Flight
-        </h1>
-    </div>
-    <div class="row col">
-        <div class="col" style="margin-top: 25px;">
-            <form action="/searchflight" method="POST">
-                <div class="booking-form-box">
-                    <div class="radio-btn">
-                        <input type="radio" class="btn" name="check" checked><span>Round Trip</span>
-                        <input type="radio" class="btn" name="check"><span>One Way</span>
-                        <input type="radio" class="btn" name="check"><span>Multi-City</span>
-
-                    </div>
-                    <div class="booking-form">
-                        <label>Flying From</label>
-                        <input type="text" class="form-control" placeholder="City or Airport">
-                        <label>Flying To</label>
-                        <input type="text" class="form-control" placeholder="City or Airport">
-                        <div class="input-grp">
-                            <label>Departing</label>
-                            <input type="date" class="form-control select-date">
-                        </div>
-                        <div class="input-grp">
-                            <label>Returing</label>
-                            <input type="date" class="form-control select-date">
-                        </div>
-                        <div class="input-grp">
-                            <label>Adults</label>
-                            <input type="number" class="form-control" value="1">
-                        </div>
-                        <div class="input-grp">
-                            <label>Children</label>
-                            <input type="number" class="form-control" value="0">
-                        </div>
-                        <div class="input-grp">
-                            <label>Travel Class</label>
-                            <select class="custom-select">
-                                <option value="1">Economy Class</option>
-                                <option value="2">Business Class</option>
-                            </select>
-                        </div>
-                        <div class="input-grp">
-                            <button type="button" class="btn btn-primary flight">Show Flights</button>
-                        </div>
-                    </div>
-                </div>
+        <div class="booking-form">
+            <form id="flightsForm" action="/searchflight" method="POST">
+            <label>Flying From:</label>
+            <input type="text" id="from" class="form-control" placeholder="City or Station" name="from">
+            <label>Flying To:</label>
+            <input type="text" id="to" class="form-control" placeholder="City or Station" name="to">
+            <div class="input-grp">
+                <label>Check In:</label>
+            <input type="date" id="checkIn" class="form-control select-date" name="checkIn">              
+            </div>
+            
+            <div class="input-grp">
+                <label>No of Tickets:</label>
+            <input type="number" id="noftik" class="form-control" value="1" name="noftik">              
+            </div>
+            <div class="input-grp">
+                <label>Travel Class:</label>
+                <select class="custom-select" id="travelclass" name="travelclass">
+                    <!-- <option value="All Class">All Class</option>   -->
+                    <option value="Economy Class">Economy Class</option>              
+                    <option value="Business Class">Business Class</option>                           
+              </select>
+            </div>
+            <div class="input-grp">
+                <button type="submit" id="submitBtn" class="btn btn-primary flight" name="submitBtn" onclick="save()">Show Flights</button>
             </form>
         </div>
+    </div>
+</body>
+
+<script src="./js/flight.js"></script>
+
         <div class="col">
             <img class="img-fluid img.sticky" style="width: 900px; height: 550px;" src="./img/p2.svg" alt="O">
 

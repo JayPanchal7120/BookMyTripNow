@@ -41,6 +41,7 @@ const userSchema = new mongoose.Schema({
     },
     classname:[String],
     day:[Number]
+    
 });
 
 
