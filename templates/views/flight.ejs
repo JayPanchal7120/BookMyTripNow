@@ -35,49 +35,76 @@
 </head>
 
 <body>
-
-        <div class="booking-form">
-            <form id="flightsForm" action="/searchflight" method="POST">
-            <label>Flying From:</label>
-            <input type="text" id="from" class="form-control" placeholder="City or Station" name="from">
-            <label>Flying To:</label>
-            <input type="text" id="to" class="form-control" placeholder="City or Station" name="to">
-            <div class="input-grp">
-                <label>Check In:</label>
-            <input type="date" id="checkIn" class="form-control select-date" name="checkIn">              
-            </div>
-            
-            <div class="input-grp">
-                <label>No of Tickets:</label>
-            <input type="number" id="noftik" class="form-control" value="1" name="noftik">              
-            </div>
-            <div class="input-grp">
-                <label>Travel Class:</label>
-                <select class="custom-select" id="travelclass" name="travelclass">
-                    <!-- <option value="All Class">All Class</option>   -->
-                    <option value="Economy Class">Economy Class</option>              
-                    <option value="Business Class">Business Class</option>                           
-              </select>
-            </div>
-            <div class="input-grp">
-                <button type="submit" id="submitBtn" class="btn btn-primary flight" name="submitBtn" onclick="save()">Show Flights</button>
-            </form>
+    <%- include('../partials/navbar') %>
+        <div style="margin-top: 75px; margin-left: 230px;">
+            <h1 style="font-family: 'Marck Script', cursive;
+        font-family: 'Pacifico', cursive; ">
+                Book your Flight
+            </h1>
         </div>
-    </div>
-    <div class="col">
-        <img class="img-fluid img.sticky" style="width: 900px; height: 550px;" src="./img/p2.svg" alt="O">
-    
-    </div>
-    <%- include('../partials/footer') %>
-</body>
+        <!-- <div class="row col">
+            <div class="col" style="margin-top: 25px;">
 
+                
+                <div class="col">
+                    <img class="img-fluid img.sticky" style="width: 900px; height: 550px;" src="./img/p2.svg" alt="O">
+
+                </div>
+            </div>
+        </div> -->
+
+
+        <!-- =========== -->
+        <div class="row col">
+            <div class="col" style="margin-top: 25px;">
+                <div class="booking-form-box">
+                    <div class="radio-btn">
+                        <input type="radio" class="btn" name="check" checked><span>Round Trip</span>
+                        <input type="radio" class="btn" name="check"><span>One Way</span>
+                        <input type="radio" class="btn" name="check"><span>Multi-City</span>
+
+                    </div>
+                    <div class="booking-form">
+                        <form id="flightsForm" action="/searchflight" method="POST">
+                            <label>Flying From:</label>
+                            <input type="text" id="from" class="form-control" placeholder="City or Station" name="from">
+                            <label>Flying To:</label>
+                            <input type="text" id="to" class="form-control" placeholder="City or Station" name="to">
+                            <div class="input-grp">
+                                <label>Check In:</label>
+                                <input type="date" id="checkIn" class="form-control select-date" name="checkIn">
+                            </div>
+
+                            <div class="input-grp">
+                                <label>No of Tickets:</label>
+                                <input type="number" id="noftik" class="form-control" value="1" name="noftik">
+                            </div>
+                            <div class="input-grp">
+                                <label>Travel Class:</label>
+                                <select class="custom-select" id="travelclass" name="travelclass">
+                                    <!-- <option value="All Class">All Class</option>   -->
+                                    <option value="Economy Class">Economy Class</option>
+                                    <option value="Business Class">Business Class</option>
+                                </select>
+                            </div>
+                            <div class="input-grp">
+                                <button type="submit" id="submitBtn" class="btn btn-primary flight" name="submitBtn"
+                                    onclick="save()">Show Flights</button>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col">
+                <img class="img-fluid img.sticky" style="width: 800px; height: 600px; padding-bottom: 70px;" src="./img/p2.svg" alt="O">
+
+            </div>
+        </div>
+
+
+        <%- include('../partials/footer') %>
+</body>
 <script src="./js/flight.js"></script>
-
-    
-
-        </div>
-    </div>
-    <%- include('../partials/footer') %>
-</body>
 
 </html>

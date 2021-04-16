@@ -33,15 +33,9 @@ route.get("/contactus", services.contactus);
 
 route.get("/flight", auth, services.flight);
 
-route.get("/cab", auth, services.cab);
-
-route.get("/bus", auth, services.bus);
-
 route.get("/trainbookingForm", auth, services.trainbookingForm);
 
 route.get("/flightbookingForm", auth, services.flightbookingForm);
-
-route.get("/hotel", auth, services.hotel);
 
 route.get("/login", services.loginRegister);
 

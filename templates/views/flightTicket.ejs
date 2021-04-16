@@ -25,16 +25,22 @@
         integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
         crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Marck+Script&family=Pacifico&display=swap" rel="stylesheet">
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+   
     <style>
-        body {
+        /* body {
             background: url('../img/b4.jpg') no-repeat center center/cover;
             height: 100%;
             width: 100%;
             top: 0px;
             left: 0px;
             z-index: -1;
-            opacity: 1;
-        }
+            opacity: 1; 
+        }*/
         h1{
             text-align: center;
             margin-top: 50px;
@@ -43,9 +49,23 @@
     </style>
 </head>
 <body>
+  <%- include('../partials/navbar') %>
+  <div class="container">
+    <div class="row">
+        
+        <div class="col-lg-6">
+            <h1 class=" h-primary text fw-bold" style="margin-top: 200px; margin-left: 20px; font-size: 45px; font-family: 'Marck Script', cursive;
+            font-family: 'Pacifico', cursive; ">Booking successfull !</h1>
+
+        </div>
+        <div class="col-lg-6">
+          <img class="img-fluid img.sticky" style="margin-top: 75px;" src="./img/s2.svg" alt="O">
+      </div>
+    </div>
+</div>
     <div class="con">
         <H1>Ticket</H1>
-        <table class="table table-dark table-borderless" style="align-items: center;text-align: left; width: 730px; margin: auto; margin-top: 20px; border: 2px solid black;box-shadow: 0 4px 8px 0 rgba(0,0,0, 0.8); transform-style: preserve-3d;opacity: 0.98;">
+        <table class="table table-dark table-borderless" style="align-items: center;text-align: left; width: 730px; margin: auto; margin-top: 20px;margin-bottom: 50px; border: 2px solid black;box-shadow: 0 4px 8px 0 rgba(0,0,0, 0.8); transform-style: preserve-3d;opacity: 0.98;">
                 <tr>
                   <th ></th>
                   <td>Name</td>
