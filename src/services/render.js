@@ -5,8 +5,6 @@ const UserRegistration = require("../models/registers");
 const sendResponse = require("../../utils/sendResponse");
 const sendMail = require("../../utils/sendMail");
 const jwt = require("jsonwebtoken");
-const axios = require("axios");
-
 const bcrypt = require("bcryptjs");
 
 exports.homeRoutes = (req, res) => {
@@ -178,21 +176,8 @@ exports.searchFlight = async (req, res) => {
   }
 };
 
-exports.secret = (req, res) => {
-  // console.log(`the cookie is ${req.cookies.jwt1}`);
-  res.render("secret");
-};
-
 exports.flight = (req, res) => {
   res.render("flight");
-};
-
-exports.cab = (req, res) => {
-  res.render("cab");
-};
-
-exports.bus = (req, res) => {
-  res.render("bus");
 };
 
 exports.trainbookingForm = (req, res) => {
@@ -205,12 +190,10 @@ exports.flightbookingForm = (req, res) => {
   // console.log(req.query.id);
 };
 
-exports.hotel = (req, res) => {
-  res.render("hotel");
-};
 
 exports.loginRegister = (req, res) => {
   res.render("loginRegister", { msg: "" });
+  // res.render("loginRegister", { msg: "SucessFull" });
 };
 
 exports.logout = async (req, res) => {

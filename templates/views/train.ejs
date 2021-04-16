@@ -38,87 +38,70 @@
 
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a href="#" class="navbar-brand" style="font-family: 'Marck Script', cursive;
-        font-family: 'Pacifico', cursive; ">Book&nbsp; My Trip </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
-            aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="#services-container"> Services</a></li>
-                <li class="nav-item"><a class="nav-link" href="/contactus"> Contact us</a></li>
-                <li class="nav-item"><a class="nav-link" href="./login"> Register</a></li>
-                <li class="nav-item"><a class="nav-link" href="./logout"> logout</a></li>
-                <li class="nav-item"><a class="nav-link" href="#"> Profile</a></li>
-            </ul>
-        </div>
-    </nav>
-    <div style="margin-top: 75px; margin-left: 230px;">
-        <h1 style="font-family: 'Marck Script', cursive;
+    <%- include('../partials/navbar') %>
+        <div style="margin-top: 75px; margin-left: 230px;">
+            <h1 style="font-family: 'Marck Script', cursive;
         font-family: 'Pacifico', cursive; ">
-            Book your Train
-        </h1>
-    </div>
+                Book your Train
+            </h1>
+        </div>
 
-    
-    <div class="row col">
-        <div class="col" style="margin-top: 25px;">
-            <div class="booking-form-box">
-                <!-- <div class="radio-btn">
-                    <input type="radio" class="btn" name="check" checked><span>Round Trip</span>
+
+        <div class="row col">
+            <div class="col" style="margin-top: 25px;">
+                <div class="booking-form-box">
+                    <div class="radio-btn">
+                    <!-- <input type="radio" class="btn" name="check" checked><span>Round Trip</span>
                     <input type="radio" class="btn" name="check"><span>One Way</span>
                     <input type="radio" class="btn" name="check"><span>Multi-City</span>
-        
-                </div> -->
-                <div class="booking-form">
-                    <form id="trainForm" action="/searchtrain" method="POST">
-                        <label>From:</label>
-                        <input type="text" id="from" class="form-control" placeholder="City or Station" name="from">
-                        <label>To:</label>
-                        <input type="text" id="to" class="form-control" placeholder="City or Station" name="to">
-                        <div class="input-grp">
-                            <label>Check In:</label>
-                            <input type="date" id="checkIn" class="form-control select-date" name="checkIn">
-                        </div>
-        
-                        <div class="input-grp">
-                            <label>No of Tickets:</label>
-                            <input type="number" id="noftik" class="form-control" value="1" name="noftik">
-                        </div>
-                        <div class="input-grp">
-                            <label>Travel Class:</label>
-                            <select class="custom-select" id="travelclass" name="travelclass">
-                                <!-- <option value="All Class">All Class</option> -->
-                                <option value="First Class">First Class</option>
-                                <option value="Sleeper Class">Sleeper Class</option>
-                                <option value="Second Seating">Second Seating</option>
-                                <option value="First AC">First AC</option>
-                                <option value="Second AC">Second AC</option>
-                                <option value="Third AC">Third AC</option>
-                                <option value="Third AC Economy">Third AC Economy</option>
-                                <option value="AC Chair Car">AC Chair Car</option>
-                            </select>
-                        </div>
-                        <br>
-                        <br>
-                        <div class="input-grp">
-                            <button type="submit" id="submitBtn" class="btn btn-primary train"style="align-item:center; " name="submitBtn"
-                                onclick="save()">Show Trains</button>
-                    </form>
+         -->
+                </div> 
+                    <div class="booking-form">
+                        <form id="trainForm" action="/searchtrain" method="POST">
+                            <label>From:</label>
+                            <input type="text" id="from" class="form-control" placeholder="City or Station" name="from">
+                            <label>To:</label>
+                            <input type="text" id="to" class="form-control" placeholder="City or Station" name="to">
+                            <div class="input-grp">
+                                <label>Check In:</label>
+                                <input type="date" id="checkIn" class="form-control select-date" name="checkIn">
+                            </div>
+
+                            <div class="input-grp">
+                                <label>No of Tickets:</label>
+                                <input type="number" id="noftik" class="form-control" value="1" name="noftik">
+                            </div>
+                            <div class="input-grp">
+                                <label>Travel Class:</label>
+                                <select class="custom-select" id="travelclass" name="travelclass">
+                                    <!-- <option value="All Class">All Class</option> -->
+                                    <option value="First Class">First Class</option>
+                                    <option value="Sleeper Class">Sleeper Class</option>
+                                    <option value="Second Seating">Second Seating</option>
+                                    <option value="First AC">First AC</option>
+                                    <option value="Second AC">Second AC</option>
+                                    <option value="Third AC">Third AC</option>
+                                    <option value="Third AC Economy">Third AC Economy</option>
+                                    <option value="AC Chair Car">AC Chair Car</option>
+                                </select>
+                            </div>
+                            <br>
+                            <br>
+                            <div class="input-grp">
+                                <button type="submit" id="submitBtn" class="btn btn-primary train"
+                                    style="align-item:center; " name="submitBtn" onclick="save()">Show Trains</button>
+                        </form>
+                    </div>
                 </div>
             </div>
-        </div>
         </div>
         <div class="col">
             <img class="img-fluid img.sticky" style="width: 900px; height: 550px;" src="./img/t1.svg" alt="O">
 
         </div>
-    </div>
-    <%- include('../partials/footer') %>
+        </div>
+        
+        <%- include('../partials/footer') %>
 </body>
 
 <script src="./js/train.js"></script>
