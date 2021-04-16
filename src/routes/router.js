@@ -18,7 +18,7 @@ route.get("/api/flightcharge", controller.flightcharge);
 //Routes
 route.get("", services.homeRoutes);
 
-route.get("/train", auth, services.trainBookings);
+route.get("/train", auth, services.train);
 
 route.post("/trainbookingSuccessful", auth, services.trainbookingSuccessful);
 
@@ -47,6 +47,7 @@ route.post("/register", services.register);
 
 route.get("/verify-email/:token", services.verifyEmail);
 
+route.get("/bus", auth, services.bus);
 // route.get("/download-train-ticket", services.downloadtrainticket);
 route.get("*", services.e404);
 
