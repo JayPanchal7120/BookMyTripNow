@@ -17,6 +17,11 @@ exports.contactus = (req, res) => {
 	res.render("contactus", { logged: login_status });
 };
 
+exports.aboutus = (req, res) => {
+  res.render("aboutus");
+};
+
+
 exports.train = (req, res) => {
 	res.render("train", { logged: login_status });
 };
