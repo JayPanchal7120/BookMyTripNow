@@ -16,6 +16,10 @@ exports.contactus = (req, res) => {
   res.render("contactus");
 };
 
+exports.aboutus = (req, res) => {
+  res.render("aboutus");
+};
+
 exports.trainBookings = (req, res) => {
   res.render("train");
 };

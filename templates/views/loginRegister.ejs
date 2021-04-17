@@ -14,9 +14,9 @@
     <div class="container">
       <div class="forms-container">
         <div class="signin-signup">
+          <h3 style="color: rgb(238, 55, 10);  margin-bottom:50px;" ><%=msg%></h3>
           
           <form action="/signin" class="sign-in-form" method="POST">
-            <h3 style="color: rgb(238, 55, 10);  margin-bottom:50px;" ><%=msg%></h3>
             <h2 class="title">Sign in</h2>
             <div class="input-field">
               <i class="fas fa-user"></i>
@@ -77,7 +77,7 @@
                 oninput="check()"
               />
             </div>
-            <h3 id="PNM" style="color: brown; display: none">
+            <h3 id="PNM" style="color: rgb(230, 13, 13); display: none">
               Passwords are not match
             </h3>
             <input
@@ -135,7 +135,7 @@
       </div>
     </div>
 
+    
     <script src="./js/signout.js"></script>
-    <%- include('../partials/footer') %>
   </body>
-</html>
+  </html>

@@ -31,6 +31,8 @@ route.post("/searchflight", auth, services.searchFlight);
 // route.get("/secret", auth, services.secret);
 route.get("/contactus", services.contactus);
 
+route.get("/aboutus", services.aboutus);
+
 route.get("/flight", auth, services.flight);
 
 route.get("/trainbookingForm", auth, services.trainbookingForm);
